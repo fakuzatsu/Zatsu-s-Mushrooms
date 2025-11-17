@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "mushroommod",
+	"version": "${version}",
+	"name": "ZatsusMushroomMod",
+	"description": "A mod that adds more mushrooms to the game",
+	"authors": [
+		"Zatsu"
+	],
+	"contact": {
+		"homepage": "https://github.com/fakuzatsu/Zatsu-s-Mushrooms",
+		"sources": "https://github.com/fakuzatsu/Zatsu-s-Mushrooms"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mushroommod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"zatsu.mushroommod.ZatsusMushroomMod"
+		],
+		"client": [
+			"zatsu.mushroommod.ZatsusMushroomModClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
