@@ -1,4 +1,4 @@
-package zatsu.mushroommod;
+package zatsu.mushroommod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 
@@ -12,8 +12,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import zatsu.mushroommod.ZatsusMushroomMod;
 
-public class ModItemGroups 
+public class ItemGroups 
 {
     // Creates an item group key for tab registration
     public static final ResourceKey<CreativeModeTab> MUSHROOM_ITEM_GROUP_KEY =
@@ -26,15 +27,15 @@ public class ModItemGroups
     public static final CreativeModeTab MUSHROOM_ITEM_GROUP =
         FabricItemGroup.builder()
             .title(Component.translatable("itemGroup.mushrooms"))
-            .icon(() -> new ItemStack(ModItemRegistration.get(ModItemEntries.MUSHROOM_BUTTON_BROWN)))
+            .icon(() -> new ItemStack(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_BROWN)))
             .displayItems((params, entries) ->
             {
                 // Auto-add every enum entry that belongs to this tab
-                for (var entry : ModItemEntries.values())
+                for (var entry : ItemEntries.values())
                 {
                     if (entry.itemGroup == MUSHROOM_ITEM_GROUP_KEY)
                     {
-                        entries.accept(ModItemRegistration.get(entry));
+                        entries.accept(ItemRegistration.get(entry));
                     }
                 }
             })

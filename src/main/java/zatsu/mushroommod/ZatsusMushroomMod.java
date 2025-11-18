@@ -1,6 +1,11 @@
 package zatsu.mushroommod;
 
 import net.fabricmc.api.ModInitializer;
+import zatsu.mushroommod.block.BlockRegistration;
+import zatsu.mushroommod.item.ItemGroups;
+import zatsu.mushroommod.item.ItemProperties;
+import zatsu.mushroommod.item.ItemRegistration;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,10 +19,10 @@ public class ZatsusMushroomMod implements ModInitializer
 	{
 		LOGGER.info("Hello Fabric world!");
 
-		// Force item class loading (optional in many cases, but good practice early on)
-		ModItemRegistration.init();
-		ModItemGroups.init();
-		ModItemProperties.init();
+		BlockRegistration.init();
+		ItemRegistration.init();
+		ItemGroups.init();
+		ItemProperties.init();
 	}
 
 }
