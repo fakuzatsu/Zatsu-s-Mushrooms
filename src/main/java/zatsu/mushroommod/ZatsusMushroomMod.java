@@ -17,8 +17,6 @@ public class ZatsusMushroomMod implements ModInitializer
 	@Override
 	public void onInitialize() 
 	{
-		LOGGER.info("Hello Fabric world!");
-
 		BlockRegistration.init();
 		ItemRegistration.init();
 		ItemGroups.init();

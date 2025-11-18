@@ -22,25 +22,25 @@ public enum ItemEntries
         ItemGroups.MUSHROOM_ITEM_GROUP_KEY,
         0.5f,
         0,
-        null,
-        null
-        ),
+        BlockEntries.MUSHROOM_BLOCK_BUTTON_RED,
+        PlacementBehaviors.MUSHROOM_PLACEMENT
+    ),
     MUSHROOM_CURVED_RED(
         "curved_red",
         ItemGroups.MUSHROOM_ITEM_GROUP_KEY,
         0.5f,
         0,
-        null,
-        null
-        ),
+        BlockEntries.MUSHROOM_BLOCK_CURVED_RED,
+        PlacementBehaviors.MUSHROOM_PLACEMENT
+    ),
     MUSHROOM_SKINNY_BROWN(
         "skinny_brown",
         ItemGroups.MUSHROOM_ITEM_GROUP_KEY,
         0.5f,
         0,
-        null,
-        null
-        );
+        BlockEntries.MUSHROOM_BLOCK_SKINNY_BROWN,
+        PlacementBehaviors.MUSHROOM_PLACEMENT
+    );
 
     public final String id;
     public final ResourceKey<CreativeModeTab> itemGroup;
