@@ -11,6 +11,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import zatsu.mushroommod.ZatsusMushroomMod;
+import zatsu.mushroommod.block.BlockEntries.CustomBlockSize;
+import zatsu.mushroommod.block.voxelshapes.MushroomBlock;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,17 +33,24 @@ public class BlockRegistration
             );
             ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, id);
 
-            // Create fresh properties with ID
+            // Apply ID to block properties
             BlockBehaviour.Properties props = entry.properties.setId(blockKey);
 
-            // Create block
-            Block block = new Block(props);
+            // Pick the correct block size
+            Block block;
+            if (entry.blockSize == CustomBlockSize.MUSHROOM)
+            {
+                block = new MushroomBlock(props);
+            } else
+            {
+                block = new Block(props);
+            }
 
-            // Register block
+            // Register Block
             Block registeredBlock = Registry.register(BuiltInRegistries.BLOCK, id, block);
             BLOCKS.put(entry, registeredBlock);
 
-            // Optionally register a BlockItem
+            // Register Block item if neccessary
             if (entry.createBlockItem)
             {
                 ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, id);
