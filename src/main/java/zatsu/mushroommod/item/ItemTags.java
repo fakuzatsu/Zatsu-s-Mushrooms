@@ -1,11 +1,11 @@
-package zatsu.mushroommod.datagen;
+package zatsu.mushroommod.item;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 
-public class Tags
+public class ItemTags
 {
     public static class Items
     {

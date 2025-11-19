@@ -11,6 +11,7 @@ import zatsu.mushroommod.item.ItemEntries;
 import zatsu.mushroommod.item.ItemRegistration;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import zatsu.mushroommod.item.ItemTags;
 
 public class RecipeGenProvider extends FabricRecipeProvider
 {
@@ -30,8 +31,8 @@ public class RecipeGenProvider extends FabricRecipeProvider
 				// Mushroom Stew
 				shapeless(RecipeCategory.FOOD, Items.MUSHROOM_STEW)
 					.requires(Items.BOWL)
-					.requires(Tags.Items.MUSHROOMS)
-					.requires(Tags.Items.MUSHROOMS)
+					.requires(ItemTags.Items.MUSHROOMS)
+					.requires(ItemTags.Items.MUSHROOMS)
 					// Create an advancement that gives you the recipe
 					.unlockedBy(getHasName(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_BROWN)), has(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_BROWN)))
 					.unlockedBy(getHasName(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_RED)), has(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_RED)))

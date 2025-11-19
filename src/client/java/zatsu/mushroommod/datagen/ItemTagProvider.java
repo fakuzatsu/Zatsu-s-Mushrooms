@@ -7,6 +7,7 @@ import zatsu.mushroommod.item.ItemEntries;
 
 import net.minecraft.world.item.Items;
 import zatsu.mushroommod.item.ItemRegistration;
+import zatsu.mushroommod.item.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -20,13 +21,13 @@ public class ItemTagProvider extends FabricTagProvider.ItemTagProvider
     @Override
     protected void addTags(HolderLookup.Provider wrapperLookup)
     {
-        valueLookupBuilder(Tags.Items.MUSHROOMS)
+        valueLookupBuilder(ItemTags.Items.MUSHROOMS)
             .add(Items.BROWN_MUSHROOM)
             .add(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_BROWN))
             .add(ItemRegistration.get(ItemEntries.MUSHROOM_CURVED_RED))
             .add(ItemRegistration.get(ItemEntries.MUSHROOM_SKINNY_BROWN));
 
-        valueLookupBuilder(Tags.Items.POISONOUS_MUSHROOMS)
+        valueLookupBuilder(ItemTags.Items.POISONOUS_MUSHROOMS)
             .add(Items.RED_MUSHROOM)
             .add(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_RED));
 
