@@ -1,5 +1,7 @@
 package zatsu.mushroommod.block;
 
+import java.util.List;
+
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Blocks;
 
@@ -10,28 +12,32 @@ public enum BlockEntries
         BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_MUSHROOM),
         false,
         RenderLayerType.CUTOUT,
-        CustomBlockSize.MUSHROOM
+        CustomBlockSize.MUSHROOM,
+        List.of("mushroommod:button_brown")
     ),
     MUSHROOM_BLOCK_BUTTON_RED(
         "button_red_block",
         BlockBehaviour.Properties.ofFullCopy(Blocks.RED_MUSHROOM),
         false,
         RenderLayerType.CUTOUT,
-        CustomBlockSize.MUSHROOM
+        CustomBlockSize.MUSHROOM,
+        List.of("mushroommod:button_red")
     ),
     MUSHROOM_BLOCK_CURVED_RED(
         "curved_red_block",
         BlockBehaviour.Properties.ofFullCopy(Blocks.RED_MUSHROOM),
         false,
         RenderLayerType.CUTOUT,
-        CustomBlockSize.MUSHROOM
+        CustomBlockSize.MUSHROOM,
+        List.of("mushroommod:curved_red")
     ),
     MUSHROOM_BLOCK_SKINNY_BROWN(
         "skinny_brown_block",
         BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_MUSHROOM),
         false,
         RenderLayerType.CUTOUT,
-        CustomBlockSize.MUSHROOM
+        CustomBlockSize.MUSHROOM,
+        List.of("mushroommod:skinny_brown")
     );
 
     public final String id;
@@ -39,18 +45,21 @@ public enum BlockEntries
     public final boolean createBlockItem;
     public final RenderLayerType renderLayer;
     public final CustomBlockSize blockSize;
+    public final List<String> drops;
 
     BlockEntries(String id, 
         BlockBehaviour.Properties properties, 
         boolean createBlockItem, 
         RenderLayerType renderLayer,
-        CustomBlockSize blockSize)
+        CustomBlockSize blockSize,
+        List<String> drops)
     {
         this.id = id;
         this.properties = properties;
         this.createBlockItem = createBlockItem;
         this.renderLayer = renderLayer;
         this.blockSize = blockSize;
+        this.drops = drops;
     }
 
     public enum RenderLayerType

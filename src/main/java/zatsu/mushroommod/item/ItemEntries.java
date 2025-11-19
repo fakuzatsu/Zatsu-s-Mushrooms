@@ -1,10 +1,14 @@
 package zatsu.mushroommod.item;
 
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import zatsu.mushroommod.block.BlockEntries;
 import zatsu.mushroommod.block.BlockPlacementBehavior;
 import zatsu.mushroommod.block.PlacementBehaviors;
+
+import java.util.List;
 
 public enum ItemEntries 
 {
@@ -15,7 +19,8 @@ public enum ItemEntries
         0.5f,
         0,
         BlockEntries.MUSHROOM_BLOCK_BUTTON_BROWN,
-        PlacementBehaviors.MUSHROOM_PLACEMENT
+        PlacementBehaviors.MUSHROOM_PLACEMENT,
+        List.of(ItemTags.Items.MUSHROOMS)
     ),
     MUSHROOM_BUTTON_RED(
         "button_red",
@@ -23,7 +28,8 @@ public enum ItemEntries
         0.5f,
         0,
         BlockEntries.MUSHROOM_BLOCK_BUTTON_RED,
-        PlacementBehaviors.MUSHROOM_PLACEMENT
+        PlacementBehaviors.MUSHROOM_PLACEMENT,
+        List.of(ItemTags.Items.POISONOUS_MUSHROOMS)
     ),
     MUSHROOM_CURVED_RED(
         "curved_red",
@@ -31,7 +37,8 @@ public enum ItemEntries
         0.5f,
         0,
         BlockEntries.MUSHROOM_BLOCK_CURVED_RED,
-        PlacementBehaviors.MUSHROOM_PLACEMENT
+        PlacementBehaviors.MUSHROOM_PLACEMENT,
+        List.of(ItemTags.Items.MUSHROOMS)
     ),
     MUSHROOM_SKINNY_BROWN(
         "skinny_brown",
@@ -39,7 +46,8 @@ public enum ItemEntries
         0.5f,
         0,
         BlockEntries.MUSHROOM_BLOCK_SKINNY_BROWN,
-        PlacementBehaviors.MUSHROOM_PLACEMENT
+        PlacementBehaviors.MUSHROOM_PLACEMENT,
+        List.of(ItemTags.Items.MUSHROOMS)
     );
 
     public final String id;
@@ -48,13 +56,15 @@ public enum ItemEntries
     public final Integer fuelSeconds;
     public final BlockEntries blockToPlace;
     public final BlockPlacementBehavior placementBehavior;
+    public final List<TagKey<Item>> tags;
 
     ItemEntries(String id,
         ResourceKey<CreativeModeTab> itemGroup,
         Float compostChance,
         Integer fuelSeconds,
         BlockEntries blockToPlace,
-        BlockPlacementBehavior placementBehavior)
+        BlockPlacementBehavior placementBehavior,
+        List<TagKey<Item>> tags)
     {
         this.id = id;
         this.itemGroup = itemGroup;
@@ -62,5 +72,6 @@ public enum ItemEntries
         this.fuelSeconds = fuelSeconds;
         this.blockToPlace = blockToPlace;
         this.placementBehavior = placementBehavior;
+        this.tags = List.copyOf(tags);
     }
 }
