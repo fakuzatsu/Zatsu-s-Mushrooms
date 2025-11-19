@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"zatsu.mushroommod.ZatsusMushroomModClient"
+		],
+		"fabric-datagen": [
+			"zatsu.mushroommod.ZatsusMushroomModDataGenerator"
 		]
 	},
 	"depends": {
