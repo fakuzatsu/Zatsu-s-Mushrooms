@@ -7,8 +7,6 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
-import zatsu.mushroommod.item.ItemEntries;
-import zatsu.mushroommod.item.ItemRegistration;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import zatsu.mushroommod.item.ItemTags;
@@ -33,11 +31,7 @@ public class RecipeGenProvider extends FabricRecipeProvider
 					.requires(Items.BOWL)
 					.requires(ItemTags.Items.MUSHROOMS)
 					.requires(ItemTags.Items.MUSHROOMS)
-					// Create an advancement that gives you the recipe
-					.unlockedBy(getHasName(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_BROWN)), has(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_BROWN)))
-					.unlockedBy(getHasName(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_RED)), has(ItemRegistration.get(ItemEntries.MUSHROOM_BUTTON_RED)))
-					.unlockedBy(getHasName(ItemRegistration.get(ItemEntries.MUSHROOM_CURVED_RED)), has(ItemRegistration.get(ItemEntries.MUSHROOM_CURVED_RED)))
-					.unlockedBy(getHasName(ItemRegistration.get(ItemEntries.MUSHROOM_SKINNY_BROWN)), has(ItemRegistration.get(ItemEntries.MUSHROOM_SKINNY_BROWN)))
+					.unlockedBy("has_mushroom", has(ItemTags.Items.MUSHROOMS))
 					.save(output);
 			}
 		};
