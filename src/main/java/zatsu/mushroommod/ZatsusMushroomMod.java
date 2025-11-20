@@ -23,6 +23,7 @@ public class ZatsusMushroomMod implements ModInitializer
 		ItemGroups.init();
 		ItemProperties.init();
 		ModRecipeSerializers.init();
+		zatsu.mushroommod.worldgen.ModConfiguredFeatures.init();
 	}
 
 }

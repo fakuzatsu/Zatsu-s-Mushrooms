@@ -7,36 +7,44 @@ import net.minecraft.world.level.block.Blocks;
 
 public enum BlockEntries 
 {
-    MUSHROOM_BLOCK_BUTTON_BROWN(
-        "button_brown_block",
+    MUSHROOM_BUTTON_BROWN(
+        "button_brown",
         BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_MUSHROOM),
         false,
         RenderLayerType.CUTOUT,
         CustomBlockSize.MUSHROOM,
         List.of("mushroommod:button_brown")
     ),
-    MUSHROOM_BLOCK_BUTTON_RED(
-        "button_red_block",
+    MUSHROOM_BUTTON_RED(
+        "button_red",
         BlockBehaviour.Properties.ofFullCopy(Blocks.RED_MUSHROOM),
         false,
         RenderLayerType.CUTOUT,
         CustomBlockSize.MUSHROOM,
         List.of("mushroommod:button_red")
     ),
-    MUSHROOM_BLOCK_CURVED_RED(
-        "curved_red_block",
+    MUSHROOM_CURVED_RED(
+        "curved_red",
         BlockBehaviour.Properties.ofFullCopy(Blocks.RED_MUSHROOM),
         false,
         RenderLayerType.CUTOUT,
         CustomBlockSize.MUSHROOM,
         List.of("mushroommod:curved_red")
     ),
-    MUSHROOM_BLOCK_SKINNY_BROWN(
-        "skinny_brown_block",
+    MUSHROOM_SKINNY_BROWN(
+        "skinny_brown",
         BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_MUSHROOM),
         false,
         RenderLayerType.CUTOUT,
         CustomBlockSize.MUSHROOM,
+        List.of("mushroommod:skinny_brown")
+    ),
+    MUSHROOM_BLOCK_SKINNY_BROWN(
+        "skinny_brown_block",
+        BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_MUSHROOM_BLOCK),
+        false,
+        null,
+        null,
         List.of("mushroommod:skinny_brown")
     );
 
@@ -72,6 +80,7 @@ public enum BlockEntries
     public enum CustomBlockSize
     {
         NONE,
-        MUSHROOM
+        MUSHROOM,
+        BONEMEALABLE_MUSHROOM
     }
 }

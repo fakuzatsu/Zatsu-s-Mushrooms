@@ -18,7 +18,7 @@ public enum ItemEntries
         ItemGroups.MUSHROOM_ITEM_GROUP_KEY,
         0.5f,
         0,
-        BlockEntries.MUSHROOM_BLOCK_BUTTON_BROWN,
+        BlockEntries.MUSHROOM_BUTTON_BROWN,
         PlacementBehaviors.MUSHROOM_PLACEMENT,
         List.of(ItemTags.Items.MUSHROOMS)
     ),
@@ -27,7 +27,7 @@ public enum ItemEntries
         ItemGroups.MUSHROOM_ITEM_GROUP_KEY,
         0.5f,
         0,
-        BlockEntries.MUSHROOM_BLOCK_BUTTON_RED,
+        BlockEntries.MUSHROOM_BUTTON_RED,
         PlacementBehaviors.MUSHROOM_PLACEMENT,
         List.of(ItemTags.Items.POISONOUS_MUSHROOMS)
     ),
@@ -36,7 +36,7 @@ public enum ItemEntries
         ItemGroups.MUSHROOM_ITEM_GROUP_KEY,
         0.5f,
         0,
-        BlockEntries.MUSHROOM_BLOCK_CURVED_RED,
+        BlockEntries.MUSHROOM_CURVED_RED,
         PlacementBehaviors.MUSHROOM_PLACEMENT,
         List.of(ItemTags.Items.MUSHROOMS)
     ),
@@ -45,7 +45,7 @@ public enum ItemEntries
         ItemGroups.MUSHROOM_ITEM_GROUP_KEY,
         0.5f,
         0,
-        BlockEntries.MUSHROOM_BLOCK_SKINNY_BROWN,
+        BlockEntries.MUSHROOM_SKINNY_BROWN,
         PlacementBehaviors.MUSHROOM_PLACEMENT,
         List.of(ItemTags.Items.MUSHROOMS)
     );
