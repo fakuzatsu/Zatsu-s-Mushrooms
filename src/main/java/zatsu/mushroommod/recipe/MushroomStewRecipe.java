@@ -1,9 +1,12 @@
 package zatsu.mushroommod.recipe;
 
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import zatsu.mushroommod.item.ItemTags;
@@ -53,11 +56,34 @@ public class MushroomStewRecipe extends CustomRecipe
         return bowlCount == 1 && mushroomCount == 2 && mushrooms.size() == 2;
     }
 
-	@Override
-	public ItemStack assemble(CraftingInput container, HolderLookup.Provider registryAccess)
+    @Override
+    public ItemStack assemble(CraftingInput container, HolderLookup.Provider registryAccess)
     {
-		return new ItemStack(Items.MUSHROOM_STEW);
-	}
+        int poisonousMushroomCount = 0;
+        for (int i = 0; i < container.size(); i++)
+        {
+            ItemStack stack = container.getItem(i);
+            if (stack.is(ItemTags.Items.POISONOUS_MUSHROOMS))
+            {
+                poisonousMushroomCount++;
+            }
+        }
+        
+        ItemStack result = new ItemStack(Items.MUSHROOM_STEW);
+        
+        if (poisonousMushroomCount > 0)
+        {
+            int duration = poisonousMushroomCount > 1 ? 200 : 120;
+            SuspiciousStewEffects effects = new SuspiciousStewEffects(
+                java.util.List.of(
+                    new SuspiciousStewEffects.Entry(MobEffects.POISON, duration)
+                )
+            );
+            result.set(DataComponents.SUSPICIOUS_STEW_EFFECTS, effects);
+        }
+        
+        return result;
+    }
 
 	@Override
 	public RecipeSerializer<MushroomStewRecipe> getSerializer()
