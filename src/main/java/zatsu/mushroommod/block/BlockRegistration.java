@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import zatsu.mushroommod.ZatsusMushroomMod;
 import zatsu.mushroommod.block.BlockEntries.CustomBlockSize;
-import zatsu.mushroommod.block.voxelshapes.MushroomBlock;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,12 +35,13 @@ public class BlockRegistration
             // Apply ID to block properties
             BlockBehaviour.Properties props = entry.properties.setId(blockKey);
 
-            // Pick the correct block size
+            // Pick the correct block type
             Block block;
             if (entry.blockSize == CustomBlockSize.MUSHROOM)
             {
-                block = new MushroomBlock(props);
-            } else
+                block = new BonemeableMushroomBlock(props, entry.configuredFeature);
+            }
+            else
             {
                 block = new Block(props);
             }
