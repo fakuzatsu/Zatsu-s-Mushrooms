@@ -3,13 +3,11 @@ package zatsu.mushroommod.datagen;
 import java.util.concurrent.CompletableFuture;
 
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.world.item.Items;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import zatsu.mushroommod.item.ItemTags;
+import zatsu.mushroommod.recipe.CraftingRecipes;
 
 public class RecipeGenProvider extends FabricRecipeProvider
 {
@@ -26,13 +24,7 @@ public class RecipeGenProvider extends FabricRecipeProvider
 			@Override
 			public void buildRecipes()
 			{
-				// Mushroom Stew
-				shapeless(RecipeCategory.FOOD, Items.MUSHROOM_STEW)
-					.requires(Items.BOWL)
-					.requires(ItemTags.Items.MUSHROOMS)
-					.requires(ItemTags.Items.MUSHROOMS)
-					.unlockedBy("has_mushroom", has(ItemTags.Items.MUSHROOMS))
-					.save(output);
+				CraftingRecipes.register(exporter);
 			}
 		};
 	}
@@ -40,6 +32,6 @@ public class RecipeGenProvider extends FabricRecipeProvider
 	@Override
 	public String getName()
 	{
-		return "RecipeGenProvider";
+		return "Mushroom Mod Recipes";
 	}
 }

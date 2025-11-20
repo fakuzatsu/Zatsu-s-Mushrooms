@@ -5,6 +5,7 @@ import zatsu.mushroommod.block.BlockRegistration;
 import zatsu.mushroommod.item.ItemGroups;
 import zatsu.mushroommod.item.ItemProperties;
 import zatsu.mushroommod.item.ItemRegistration;
+import zatsu.mushroommod.recipe.ModRecipeSerializers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,7 @@ public class ZatsusMushroomMod implements ModInitializer
 		ItemRegistration.init();
 		ItemGroups.init();
 		ItemProperties.init();
+		ModRecipeSerializers.init();
 	}
 
 }
