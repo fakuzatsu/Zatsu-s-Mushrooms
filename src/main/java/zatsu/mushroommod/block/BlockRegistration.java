@@ -39,7 +39,15 @@ public class BlockRegistration
             Block block;
             if (entry.blockSize == CustomBlockSize.MUSHROOM)
             {
-                block = new BonemeableMushroomBlock(props, entry.configuredFeature);
+                // Check if this is a button mushroom (requires 2x2 pattern)
+                if (entry == BlockEntries.MUSHROOM_BUTTON_BROWN || entry == BlockEntries.MUSHROOM_BUTTON_RED)
+                {
+                    block = new TwoByTwoBonemeableMushroomBlock(props, entry.configuredFeature);
+                }
+                else
+                {
+                    block = new BonemeableMushroomBlock(props, entry.configuredFeature);
+                }
             }
             else
             {

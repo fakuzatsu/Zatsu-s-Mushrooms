@@ -6,6 +6,8 @@ import zatsu.mushroommod.item.ItemGroups;
 import zatsu.mushroommod.item.ItemProperties;
 import zatsu.mushroommod.item.ItemRegistration;
 import zatsu.mushroommod.recipe.ModRecipeSerializers;
+import zatsu.mushroommod.worldgen.ModConfiguredFeatures;
+import zatsu.mushroommod.worldgen.ModFeatures;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +25,8 @@ public class ZatsusMushroomMod implements ModInitializer
 		ItemGroups.init();
 		ItemProperties.init();
 		ModRecipeSerializers.init();
-		zatsu.mushroommod.worldgen.ModConfiguredFeatures.init();
+		ModConfiguredFeatures.init();
+		ModFeatures.init();
 	}
 
 }

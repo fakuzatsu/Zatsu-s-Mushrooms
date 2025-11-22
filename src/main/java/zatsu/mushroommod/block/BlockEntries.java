@@ -49,7 +49,7 @@ public enum BlockEntries
     MUSHROOM_BLOCK_BUTTON_BROWN(
         "button_brown_block",
         BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_MUSHROOM_BLOCK),
-        false,
+        true,
         null,
         null,
         List.of("mushroommod:button_brown"),
@@ -58,7 +58,7 @@ public enum BlockEntries
     MUSHROOM_BLOCK_BUTTON_RED(
         "button_red_block",
         BlockBehaviour.Properties.ofFullCopy(Blocks.RED_MUSHROOM_BLOCK),
-        false,
+        true,
         null,
         null,
         List.of("mushroommod:button_red"),
@@ -67,7 +67,7 @@ public enum BlockEntries
     MUSHROOM_BLOCK_CURVED_RED(
         "curved_red_block",
         BlockBehaviour.Properties.ofFullCopy(Blocks.RED_MUSHROOM_BLOCK),
-        false,
+        true,
         null,
         null,
         List.of("mushroommod:curved_red"),
@@ -76,7 +76,7 @@ public enum BlockEntries
     MUSHROOM_BLOCK_SKINNY_BROWN(
         "skinny_brown_block",
         BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_MUSHROOM_BLOCK),
-        false,
+        true,
         null,
         null,
         List.of("mushroommod:skinny_brown"),
