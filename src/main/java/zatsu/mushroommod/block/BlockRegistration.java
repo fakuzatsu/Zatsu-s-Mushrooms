@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import zatsu.mushroommod.ZatsusMushroomMod;
 import zatsu.mushroommod.block.BlockEntries.CustomBlockSize;
+import zatsu.mushroommod.worldgen.ConfiguredFeatures;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,8 +40,9 @@ public class BlockRegistration
             Block block;
             if (entry.blockSize == CustomBlockSize.MUSHROOM)
             {
-                // Check if this is a button mushroom (requires 2x2 pattern)
-                if (entry == BlockEntries.MUSHROOM_BUTTON_BROWN || entry == BlockEntries.MUSHROOM_BUTTON_RED)
+                // Check if this the huge variany of this mushroom requires a 2x2 pattern
+                if (entry.configuredFeature == ConfiguredFeatures.HUGE_BUTTON_BROWN_MUSHROOM
+                 || entry.configuredFeature == ConfiguredFeatures.HUGE_BUTTON_RED_MUSHROOM)
                 {
                     block = new TwoByTwoBonemeableMushroomBlock(props, entry.configuredFeature);
                 }
