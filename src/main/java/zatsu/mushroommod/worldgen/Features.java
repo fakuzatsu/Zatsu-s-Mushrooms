@@ -9,7 +9,7 @@ import zatsu.mushroommod.ZatsusMushroomMod;
 import zatsu.mushroommod.worldgen.feature.CurvedStemMushroomFeature;
 import zatsu.mushroommod.worldgen.feature.TwoByTwoMushroomFeature;
 
-public class ModFeatures
+public class Features
 {
     // Registers world generation features for custom huge mushrooms
     public static final Feature<HugeMushroomFeatureConfiguration> CURVED_STEM_MUSHROOM = 

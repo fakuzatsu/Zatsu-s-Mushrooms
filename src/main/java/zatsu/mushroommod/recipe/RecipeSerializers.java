@@ -9,7 +9,7 @@ import zatsu.mushroommod.RegUtils;
 
 import java.util.function.Supplier;
 
-public class ModRecipeSerializers 
+public class RecipeSerializers 
 {
 	public static final Supplier<RecipeSerializer<MushroomStewRecipe>> MUSHROOM_STEW =
 			RegUtils.regRecipeSerializer("mushroom_stew", () -> new RecipeSerializer<MushroomStewRecipe>()

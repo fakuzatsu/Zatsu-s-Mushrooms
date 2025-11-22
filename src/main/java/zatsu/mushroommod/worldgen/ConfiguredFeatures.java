@@ -6,7 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import zatsu.mushroommod.ZatsusMushroomMod;
 
-public class ModConfiguredFeatures
+public class ConfiguredFeatures
 {
     // Resource key for our custom huge mushrooms
     // Configured in: data/mushroommod/worldgen/configured_feature/huge_skinny_brown_mushroom.json

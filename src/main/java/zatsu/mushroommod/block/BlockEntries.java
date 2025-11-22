@@ -3,7 +3,7 @@ package zatsu.mushroommod.block;
 import java.util.List;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import zatsu.mushroommod.worldgen.ModConfiguredFeatures;
+import zatsu.mushroommod.worldgen.ConfiguredFeatures;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.resources.ResourceKey;
@@ -17,7 +17,7 @@ public enum BlockEntries
         RenderLayerType.CUTOUT,
         CustomBlockSize.MUSHROOM,
         List.of("mushroommod:button_brown"),
-        ModConfiguredFeatures.HUGE_BUTTON_BROWN_MUSHROOM
+        ConfiguredFeatures.HUGE_BUTTON_BROWN_MUSHROOM
     ),
     MUSHROOM_BUTTON_RED(
         "button_red",
@@ -26,7 +26,7 @@ public enum BlockEntries
         RenderLayerType.CUTOUT,
         CustomBlockSize.MUSHROOM,
         List.of("mushroommod:button_red"),
-        ModConfiguredFeatures.HUGE_BUTTON_RED_MUSHROOM
+        ConfiguredFeatures.HUGE_BUTTON_RED_MUSHROOM
     ),
     MUSHROOM_CURVED_RED(
         "curved_red",
@@ -35,7 +35,7 @@ public enum BlockEntries
         RenderLayerType.CUTOUT,
         CustomBlockSize.MUSHROOM,
         List.of("mushroommod:curved_red"),
-        ModConfiguredFeatures.HUGE_CURVED_RED_MUSHROOM
+        ConfiguredFeatures.HUGE_CURVED_RED_MUSHROOM
     ),
     MUSHROOM_SKINNY_BROWN(
         "skinny_brown",
@@ -44,7 +44,7 @@ public enum BlockEntries
         RenderLayerType.CUTOUT,
         CustomBlockSize.MUSHROOM,
         List.of("mushroommod:skinny_brown"),
-        ModConfiguredFeatures.HUGE_SKINNY_BROWN_MUSHROOM
+        ConfiguredFeatures.HUGE_SKINNY_BROWN_MUSHROOM
     ),
     MUSHROOM_BLOCK_BUTTON_BROWN(
         "button_brown_block",
@@ -118,7 +118,6 @@ public enum BlockEntries
     public enum CustomBlockSize
     {
         NONE,
-        MUSHROOM,
-        BONEMEALABLE_MUSHROOM
+        MUSHROOM
     }
 }

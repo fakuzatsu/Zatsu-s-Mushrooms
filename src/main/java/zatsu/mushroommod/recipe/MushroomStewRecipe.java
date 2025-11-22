@@ -88,7 +88,7 @@ public class MushroomStewRecipe extends CustomRecipe
 	@Override
 	public RecipeSerializer<MushroomStewRecipe> getSerializer()
     {
-		return ModRecipeSerializers.MUSHROOM_STEW.get();
+		return RecipeSerializers.MUSHROOM_STEW.get();
 	}
 }
 
